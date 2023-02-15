@@ -1,20 +1,28 @@
-function numStrBool(){
-    const num = [1,2,3,4]
-    const string = ['a','b','c','d']
-    const booleanos = [1,'a', 3 === 3]
-    
-    // Imprimi a quantidade de itens de cada array
-    console.log(`Qtd de itens do arrays de números: ${num.length}
-Qtd de itens do arrays de strings: ${string.length}
-Qtd de itens do arrays de booleanos: ${booleanos.length}`)
+    const num = [1, 2, 3, 4]
+    const string = ['a', 'b', 'c', 'd']
+    const numStringBool = [9, 'horus', true ]
 
-    // Imprimi o primeiro item do primeiro array, o segundo item do segundo array, e o terceiro item do terceiro array
-    console.log(`Primeiro item do primeiro array: ${num[0]}
-Segundo item do segundo array: ${string[1]}
-Terceiro item do terceiro array ${booleanos[2]}`)
-
-    // Verifica itens no primeiro e no terceiro array
-    console.log(`Tem o número "3" incluído no primeiro array? ${num.includes(3)}
-Tem a letra "c" incluída no terceiro array? ${booleanos.includes('c')}`)
+const arrayTresVariaveis = () => {
+    console.log(`Array número: ${num}
+Array string: ${string}
+Array número, string e booleano: ${numStringBool}`)
 }
-numStrBool()
+arrayTresVariaveis()
+
+// a) Imprimir a quantidade de cada array
+const qtdNum = num.length
+console.log(`Qtd de itens array número: ${qtdNum}`)
+
+// b) Imprima o primeiro item do primeiro array, o segundo item do segundo array, e o terceiro item do terceiro array
+const itemPrimeiroArray = num[0]
+const itemSegundoArray = string[1]
+const itemTerceiroArray = numStringBool[2]
+console.log(`Primeiro item do primeiro array: ${itemPrimeiroArray}
+Segundo item do segundo array: ${itemSegundoArray}
+Terceiro item do terceiro array: ${itemTerceiroArray}`)
+
+// c) Verifica se um item está incluído no primeiro array e depois no terceiro array
+const temUm = num.includes(1)
+const temHorus = numStringBool.includes('horus')
+console.log(`Tem "1" no primeiro array: ${temUm}
+Tem a palavra "horus" no terceiro array: ${temHorus}`)
