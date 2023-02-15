@@ -1,26 +1,28 @@
-// Adiciona um item numero ao inicio do primeiro array
-console.log('Adiciona um item (5) número ao inicio do array')
-const primeiroArrayOriginal = [1,2,3,4]
-primeiroArrayOriginal.unshift(5)
-const primeiroArrayCopia = [1,2,3,4]
-console.log(`Array original: ${primeiroArrayOriginal}
-Array copia: ${primeiroArrayCopia}`)
-console.log('----------------------------------------------------')
+const numOriginal = [1, 2, 3, 4]
+const stringOriginal = ['a', 'b', 'c', 'd']
+const numStringBoolOriginal = [9, 'horus', true ]
 
-// Remove o último item do segundo array.
-console.log('Remove o último item (1) do array')
-const segundoArrayOriginal = [4,3,2,1]
-segundoArrayOriginal.pop()
-const segundoArrayCopia = [4,3,2,1]
-console.log(`Array original: ${segundoArrayOriginal}
-Array copia: ${segundoArrayCopia}`)
-console.log('----------------------------------------------------')
+const arrayTresVariaveis = () => {
+console.log(`Array número: ${numOriginal}
+Array string: ${stringOriginal}
+Array número, string e booleano: ${numStringBoolOriginal}`)
+}
+arrayTresVariaveis()
 
-// Remove o segundo item do terceiro array
-console.log('Remove o segundo item (b) do array')
-const terceiroArrayOriginal = ['a','b','c','d']
-terceiroArrayOriginal.splice(1, 1)
-const terceiroArrayCopia = ['a','b','c','d']
-console.log(`Array original: ${terceiroArrayOriginal}
-Array copia: ${terceiroArrayCopia}`)
-console.log('----------------------------------------------------')
+// a) Adiciona um item de valor número no inicio do array
+const numCopia = numOriginal.slice()
+numCopia.unshift(777)
+console.log(`Array original: ${numOriginal}
+Array copia: ${numCopia}`)
+
+// b) Remove o ultimo item do segundo array
+const stringCopia = stringOriginal.slice()
+stringCopia.pop()
+console.log(`Array original: ${stringOriginal}
+Array copia: ${stringCopia}`)
+
+// c) Remove o segundo item do terceiro array.
+const numStringBoolCopia = numStringBoolOriginal.slice()
+numStringBoolCopia.splice(2,1)
+console.log(`Array original: ${numStringBoolOriginal}
+Array copia: ${numStringBoolCopia}`)
